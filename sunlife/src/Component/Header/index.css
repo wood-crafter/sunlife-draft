@@ -1,0 +1,19 @@
+.header {
+  border-top: 1rem solid #f7ca27;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3rem solid #f1f7f7;
+}
+.logo {
+  height: 100%;
+  width: 10rem;
+  margin-left: 15%;
+}
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

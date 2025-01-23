@@ -1,83 +1,37 @@
 import "./App.css";
+import Header from "./Component/Header/index.tsx";
+import ChatContent from "./Component/ChatContent/index.tsx";
 
 function App() {
+  const chatMessages = [
+    {
+      avatarUrl: "/logo.webp",
+      content:
+        "Hi <strong>Rvsxmzrcx Vcllznbxvz</strong>. Welcome to Sunny (Advisor Assistant) Chatbox! Please let me know how I can help you.",
+    },
+    {
+      avatarUrl: "/logo.webp",
+      content: `
+        To get the most accurate results, simply start your question with:
+        <br />
+        '<strong>Product:</strong>' For the question relating to the Traditional and VUL product features and Rider,
+        <br />
+        '<strong>New Business Processing:</strong>' For the question relating to underwriting rules & requirements,
+        <br />
+        '<strong>Digital:</strong>' For question relating to Digital Solutions
+      `,
+    },
+    {
+      avatarUrl: "/logo.webp",
+      content:
+        "Hi <strong>Rvsxmzrcx Vcllznbxvz</strong>. Welcome to Sunny (Advisor Assistant) Chatbox! Please let me know how I can help you.",
+    },
+  ];
   return (
     <div className="app">
-      <div className="header">
-        <img className="logo" src="/logo-name.webp" alt="Logo" />
-        <h2 className="title">Sunny (Advisor Assistant)</h2>
-        <img
-          className="logo"
-          src="/logo-name.webp"
-          alt="Logo"
-          style={{ opacity: 0, marginRight: "15%", marginLeft: 0 }}
-        />
-      </div>
+      <Header />
       <div className="assistant-chat-container">
-        <div className="assistant-chat">
-          <div className="chart-line">
-            <img
-              className="avatar-sunlife"
-              src="/logo.webp"
-              alt="avatar Sunlife"
-            />
-            <div className="chat-content">
-              <p className="chart-content-line">
-                Hi <strong>Rvsxmzrcx Vcllznbxvz</strong>. Welcome to Sunny
-                (Advisor Assistant) Chatbox! Please let me know how I can help
-                you.
-              </p>
-            </div>
-          </div>
-
-          <div className="chart-line">
-            <img
-              className="avatar-sunlife"
-              src="/logo.webp"
-              alt="avatar Sunlife"
-            />
-            <div className="chat-content">
-              <p className="chart-content-line">
-                To get the most accurate results, simply start your question
-                with
-                <br />
-              </p>
-              <p className="chart-content-line">
-                '<strong>Product:</strong>' For the question relating to the
-                Traditional and VUL product features and Rider, '<br />
-              </p>
-              <p className="chart-content-line">
-                <strong>New Business Processing:</strong>' For the question
-                relating to underwriting rules & requrements, '<br />
-              </p>
-              <p className="chart-content-line">
-                <strong>Digital:</strong>' For question relating to Digital
-                Solutions
-              </p>
-            </div>
-          </div>
-
-          <div className="chart-line">
-            <img
-              className="avatar-sunlife"
-              src="/logo.webp"
-              alt="avatar Sunlife"
-            />
-            <div className="chat-content">
-              <p className="chart-content-line">
-                Hi <strong>Rvsxmzrcx Vcllznbxvz</strong>. Welcome to Sunny
-                (Advisor Assistant) Chatbox! Please let me know how I can help
-                you.
-              </p>
-            </div>
-          </div>
-
-          <input
-            className="chat-input"
-            type="text"
-            placeholder="Type your question here. Please avoid use of any sensitive or personal indentifiable information."
-          />
-        </div>
+        <ChatContent messages={chatMessages} />
       </div>
 
       <button className="logout-button">
